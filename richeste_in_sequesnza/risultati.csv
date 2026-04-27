@@ -1,0 +1,11 @@
+richiesta,latenza_totale_ms,prompt_ms,predicted_ms,token_per_secondo,prompt_tokens,completion_tokens,cached_tokens,risposta
+1,1897.75,39.44,299.31,123.62,37,37,0,"Docker is a platform that allows you to build, run, and manage containers efficiently and reliably, providing a simple, safe, and portable way to deploy applications on different environments."
+2,343.62,19.44,308.26,84.34,37,26,36,"Docker is an open-source containerization platform that allows developers to package, run, and manage applications as isolated containers."
+3,205.7,12.96,181.17,143.51,37,26,36,"Docker is a containerization tool that allows developers to package, deploy, and manage software applications in isolated and portable containers."
+4,468.41,17.21,438.75,82.05,37,36,36,"Docker is a containerization platform that uses Dockerfiles to automate the creation of isolated, reproducible environments for applications, making it easier to share and reuse code across different projects."
+5,216.28,12.81,190.71,120.6,37,23,36,"Docker is a lightweight package manager that allows developers to easily create, ship, and run applications as containers."
+6,306.41,18.77,275.21,87.21,37,24,36,"Docker is a software containerization platform that allows developers to package, ship, and run applications in isolated environments."
+7,225.09,12.63,200.43,119.74,37,24,36,"Docker is a platform that enables containerization, allowing developers to package and ship applications in lightweight, isolated containers."
+8,297.06,14.44,270.04,118.5,37,32,36,"Docker is a containerization platform that packages and ships entire applications and dependencies as isolated units, making it easy to deploy and manage applications and their dependencies."
+9,215.05,13.35,189.13,126.9,37,24,36,Docker is a cloud-based platform that simplifies the process of managing and running multiple applications in a container environment.
+10,230.18,12.1,205.9,126.28,37,26,36,"Docker is a tool for building, shipping, and running applications from Dockerfiles, allowing for isolation of applications in containers."
