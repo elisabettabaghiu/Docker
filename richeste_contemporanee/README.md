@@ -2,7 +2,7 @@ Terminale 1: docker model run ai/smollm2
 Terminale 2: 
 python3 benchmark_concorrenza.py
 
-Risultato:
+Risultato: 
 Benchmark concorrenza — modello: ai/smollm2
 Livelli testati: [1, 2, 4, 8] richieste simultanee
 Ripetizioni per livello: 5
