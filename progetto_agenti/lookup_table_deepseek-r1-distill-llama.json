@@ -1,0 +1,404 @@
+{
+  "metadata": {
+    "model": "deepseek-r1-distill-llama:latest",
+    "generated": "2026-05-24T15:01:06.513007",
+    "variables": {
+      "load_level": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "capacity_level": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "legacy_risk": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "total_combinations": 27
+  },
+  "lookup_table": [
+    {
+      "load_level": "low",
+      "capacity_level": "low",
+      "legacy_risk": "low",
+      "message": "Load and capacity levels are low, requiring assistance to manage current tasks. Legacy risks are low, so I can focus on taking on more tasks with support.",
+      "metrics": {
+        "latenza_ms": 36747.19,
+        "tok_sec": 15.22,
+        "prompt_tokens": 67,
+        "completion_tokens": 375,
+        "cpu_media_pct": 22.9,
+        "ram_media_mb": 2863.8
+      }
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "low",
+      "legacy_risk": "medium",
+      "message": "Current load and capacity are low. Legacy risk is moderate; please assess whether additional tasks can be accepted or assistance is needed.",
+      "metrics": {
+        "latenza_ms": 28521.66,
+        "tok_sec": 15.17,
+        "prompt_tokens": 67,
+        "completion_tokens": 422,
+        "cpu_media_pct": 15.2,
+        "ram_media_mb": 2883.8
+      }
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "low",
+      "legacy_risk": "high",
+      "message": "\"Load and capacity are low, with high legacy risk. I need assistance managing legacy risks and could benefit from task redistribution.\"",
+      "metrics": {
+        "latenza_ms": 20794.47,
+        "tok_sec": 15.27,
+        "prompt_tokens": 67,
+        "completion_tokens": 306,
+        "cpu_media_pct": 11.8,
+        "ram_media_mb": 2880.3
+      }
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "medium",
+      "legacy_risk": "low",
+      "message": "Current load is low, able to manage additional tasks with medium capacity. Legacy risk remains low; no immediate assistance required.",
+      "metrics": {
+        "latenza_ms": 32327.88,
+        "tok_sec": 15.18,
+        "prompt_tokens": 67,
+        "completion_tokens": 477,
+        "cpu_media_pct": 11.4,
+        "ram_media_mb": 2876.8
+      }
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "medium",
+      "legacy_risk": "medium",
+      "message": "\"Load is low; can manage additional tasks with moderate capacity, but legacy risks require attention.\"",
+      "metrics": {
+        "latenza_ms": 24202.39,
+        "tok_sec": 15.3,
+        "prompt_tokens": 67,
+        "completion_tokens": 359,
+        "cpu_media_pct": 25.4,
+        "ram_media_mb": 2738.5
+      }
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "medium",
+      "legacy_risk": "high",
+      "message": "Load is low, can take on more tasks, but have high legacy risk and need help managing it.",
+      "metrics": {
+        "latenza_ms": 31307.73,
+        "tok_sec": 15.21,
+        "prompt_tokens": 67,
+        "completion_tokens": 460,
+        "cpu_media_pct": 26.3,
+        "ram_media_mb": 3199.3
+      }
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "high",
+      "legacy_risk": "low",
+      "message": "Load is low, capacity is high, and ready to assist further. Can take on additional tasks as needed.",
+      "metrics": {
+        "latenza_ms": 28658.59,
+        "tok_sec": 15.16,
+        "prompt_tokens": 67,
+        "completion_tokens": 421,
+        "cpu_media_pct": 10.1,
+        "ram_media_mb": 3341.9
+      }
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "high",
+      "legacy_risk": "medium",
+      "message": "\"I am operational and ready to assist with additional tasks, but there is a medium legacy risk to consider.\"",
+      "metrics": {
+        "latenza_ms": 18400.37,
+        "tok_sec": 15.34,
+        "prompt_tokens": 67,
+        "completion_tokens": 268,
+        "cpu_media_pct": 5.4,
+        "ram_media_mb": 3351.6
+      }
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "high",
+      "legacy_risk": "high",
+      "message": "\"My load is low, capacity is high, but I'm cautious about legacy risks. I can take on more tasks but may need help managing risks.\"",
+      "metrics": {
+        "latenza_ms": 22236.81,
+        "tok_sec": 15.27,
+        "prompt_tokens": 67,
+        "completion_tokens": 326,
+        "cpu_media_pct": 4.6,
+        "ram_media_mb": 3327.2
+      }
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "low",
+      "legacy_risk": "low",
+      "message": "\"I'm effectively managing the current load but have limited capacity. I can accept additional tasks and may require assistance if capacity becomes a constraint.\"",
+      "metrics": {
+        "latenza_ms": 24483.92,
+        "tok_sec": 15.12,
+        "prompt_tokens": 67,
+        "completion_tokens": 356,
+        "cpu_media_pct": 24.7,
+        "ram_media_mb": 3055.6
+      }
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "low",
+      "legacy_risk": "medium",
+      "message": "Current load is medium, capacity is low. Can handle additional tasks but need assistance managing legacy risks.",
+      "metrics": {
+        "latenza_ms": 22744.43,
+        "tok_sec": 15.24,
+        "prompt_tokens": 67,
+        "completion_tokens": 332,
+        "cpu_media_pct": 23.5,
+        "ram_media_mb": 2823.0
+      }
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "low",
+      "legacy_risk": "high",
+      "message": "\"Load is medium, but capacity is low, so I need help to manage without overloading. Legacy risks are high, so I can't take on more tasks right now.\"",
+      "metrics": {
+        "latenza_ms": 37131.42,
+        "tok_sec": 15.13,
+        "prompt_tokens": 67,
+        "completion_tokens": 548,
+        "cpu_media_pct": 25.9,
+        "ram_media_mb": 2886.9
+      }
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "medium",
+      "legacy_risk": "low",
+      "message": "Load is medium, capacity is medium, and legacy risk is low. I can currently manage tasks but suggest caution with new ones to avoid overloading.",
+      "metrics": {
+        "latenza_ms": 16246.55,
+        "tok_sec": 15.24,
+        "prompt_tokens": 67,
+        "completion_tokens": 235,
+        "cpu_media_pct": 25.6,
+        "ram_media_mb": 2902.3
+      }
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "medium",
+      "legacy_risk": "medium",
+      "message": "**Status Update:** My capacity is operating at a medium level, allowing me to handle additional tasks and manage legacy risks effectively.",
+      "metrics": {
+        "latenza_ms": 26071.64,
+        "tok_sec": 15.12,
+        "prompt_tokens": 67,
+        "completion_tokens": 383,
+        "cpu_media_pct": 14.5,
+        "ram_media_mb": 2862.9
+      }
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "medium",
+      "legacy_risk": "high",
+      "message": "\"System is operating within medium load and capacity levels, managing current tasks effectively. Legacy_risk is high, so I recommend caution when assigning additional tasks to avoid potential conflicts with outdated systems.\"",
+      "metrics": {
+        "latenza_ms": 25322.0,
+        "tok_sec": 15.07,
+        "prompt_tokens": 67,
+        "completion_tokens": 371,
+        "cpu_media_pct": 15.1,
+        "ram_media_mb": 2808.8
+      }
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "high",
+      "legacy_risk": "low",
+      "message": "Current state: load_level=medium, capacity_level=high, legacy_risk=low. I can accept more tasks without needing help.",
+      "metrics": {
+        "latenza_ms": 31962.5,
+        "tok_sec": 15.1,
+        "prompt_tokens": 67,
+        "completion_tokens": 468,
+        "cpu_media_pct": 5.2,
+        "ram_media_mb": 2867.6
+      }
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "high",
+      "legacy_risk": "medium",
+      "message": "\"My load is moderate, system capacity is high, and there are moderate legacy risks. I can handle additional tasks but should be cautious of historical issues.\"",
+      "metrics": {
+        "latenza_ms": 32667.71,
+        "tok_sec": 15.07,
+        "prompt_tokens": 67,
+        "completion_tokens": 477,
+        "cpu_media_pct": 13.5,
+        "ram_media_mb": 2921.3
+      }
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "high",
+      "legacy_risk": "high",
+      "message": "\"System load is moderate, operating at high capacity, and legacy risks are high. We can manage current tasks but may need support to address legacy issues.\"",
+      "metrics": {
+        "latenza_ms": 42035.42,
+        "tok_sec": 15.08,
+        "prompt_tokens": 67,
+        "completion_tokens": 623,
+        "cpu_media_pct": 13.0,
+        "ram_media_mb": 2938.9
+      }
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "low",
+      "legacy_risk": "low",
+      "message": "\"Load is high, capacity is low. Can take on additional tasks but may need help with current load.\"",
+      "metrics": {
+        "latenza_ms": 20464.66,
+        "tok_sec": 15.32,
+        "prompt_tokens": 67,
+        "completion_tokens": 299,
+        "cpu_media_pct": 14.3,
+        "ram_media_mb": 2900.5
+      }
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "low",
+      "legacy_risk": "medium",
+      "message": "\"Capacity is low, and the high load is causing strain. I need help to manage the legacy risk and maintain efficiency.\"",
+      "metrics": {
+        "latenza_ms": 58872.23,
+        "tok_sec": 14.94,
+        "prompt_tokens": 67,
+        "completion_tokens": 868,
+        "cpu_media_pct": 23.3,
+        "ram_media_mb": 2897.6
+      }
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "low",
+      "legacy_risk": "high",
+      "message": "\"Current system load is high, with low capacity and elevated legacy risks. I require assistance to manage the increased load or need to be cautious when accepting new tasks due to resource constraints.\"",
+      "metrics": {
+        "latenza_ms": 24896.8,
+        "tok_sec": 15.22,
+        "prompt_tokens": 67,
+        "completion_tokens": 367,
+        "cpu_media_pct": 16.1,
+        "ram_media_mb": 2862.7
+      }
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "medium",
+      "legacy_risk": "low",
+      "message": "\"Load is high, capacity medium. Can handle additional tasks but may need help managing workload.\"",
+      "metrics": {
+        "latenza_ms": 36880.25,
+        "tok_sec": 15.13,
+        "prompt_tokens": 67,
+        "completion_tokens": 545,
+        "cpu_media_pct": 14.8,
+        "ram_media_mb": 2897.0
+      }
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "medium",
+      "legacy_risk": "medium",
+      "message": "Load is currently high, requiring assistance. With medium capacity, I can manage additional tasks but need guidance to address legacy risks.",
+      "metrics": {
+        "latenza_ms": 19965.51,
+        "tok_sec": 15.18,
+        "prompt_tokens": 67,
+        "completion_tokens": 289,
+        "cpu_media_pct": 9.6,
+        "ram_media_mb": 3082.7
+      }
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "medium",
+      "legacy_risk": "high",
+      "message": "\"Load is high, capacity is medium, and legacy risks are concerning. I can manage more tasks but may need support to maintain stability.\"",
+      "metrics": {
+        "latenza_ms": 32825.75,
+        "tok_sec": 15.12,
+        "prompt_tokens": 67,
+        "completion_tokens": 481,
+        "cpu_media_pct": 12.4,
+        "ram_media_mb": 3112.4
+      }
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "high",
+      "legacy_risk": "low",
+      "message": "My load is high, but with high capacity, I can manage additional tasks. Legacy risk is low, so I'm operational and ready to assist.",
+      "metrics": {
+        "latenza_ms": 16654.31,
+        "tok_sec": 15.29,
+        "prompt_tokens": 67,
+        "completion_tokens": 242,
+        "cpu_media_pct": 8.8,
+        "ram_media_mb": 3019.4
+      }
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "high",
+      "legacy_risk": "medium",
+      "message": "Current load is high, and while I can manage additional tasks, the legacy risk is medium, so I request assistance to alleviate the load.",
+      "metrics": {
+        "latenza_ms": 30810.76,
+        "tok_sec": 15.09,
+        "prompt_tokens": 67,
+        "completion_tokens": 454,
+        "cpu_media_pct": 18.3,
+        "ram_media_mb": 2942.0
+      }
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "high",
+      "legacy_risk": "high",
+      "message": "\"System operational with high load and capacity. Request assistance with legacy risk management to ensure stability.\"",
+      "metrics": {
+        "latenza_ms": 23540.13,
+        "tok_sec": 15.22,
+        "prompt_tokens": 67,
+        "completion_tokens": 343,
+        "cpu_media_pct": 12.1,
+        "ram_media_mb": 3000.8
+      }
+    }
+  ]
+}
