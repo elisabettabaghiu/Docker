@@ -1,0 +1,215 @@
+{
+  "metadata": {
+    "model": "docker.io/ai/llama3.2:latest",
+    "generated": "2026-06-25T15:39:58.177176",
+    "variables": {
+      "load_level": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "capacity_level": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "latency_risk": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "total_combinations": 27
+  },
+  "lookup_table": [
+    {
+      "load_level": "low",
+      "capacity_level": "low",
+      "latency_risk": "low",
+      "advice": "scale_up",
+      "message": "System is currently operating below capacity, recommend increasing resources to prevent overload."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "low",
+      "latency_risk": "medium",
+      "advice": "scale_up",
+      "message": "Increase capacity to handle the current load, and monitor latency to adjust as needed."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "low",
+      "latency_risk": "high",
+      "advice": "scale_up",
+      "message": "System load is high, recommend increasing capacity to mitigate latency risk and maintain performance."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "medium",
+      "latency_risk": "low",
+      "advice": "scale_up",
+      "message": "Increased load expected, consider scaling up to medium-high capacity."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "medium",
+      "latency_risk": "medium",
+      "advice": "scale_up",
+      "message": "Capacity level is at medium, consider scaling up to handle increasing load. This will mitigate low load level and reduce latency risk."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "medium",
+      "latency_risk": "high",
+      "advice": "scale_up",
+      "message": "Distributed system is experiencing high latency risk, recommended to scale up capacity to maintain performance."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "high",
+      "latency_risk": "low",
+      "advice": "scale_up",
+      "message": "System is underutilized, scaling up capacity to handle increased load."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "high",
+      "latency_risk": "medium",
+      "advice": "scale_up",
+      "message": "System load is high, consider increasing capacity to handle increased demand, while monitoring latency risks."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "high",
+      "latency_risk": "high",
+      "advice": "scale_up",
+      "message": "High latency risk and low load indicate need for capacity scaling to ensure responsiveness and reduce risk."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "low",
+      "latency_risk": "low",
+      "advice": "scale_up",
+      "message": "Capacity level is low and expected traffic is increasing. Scaling up will help maintain performance."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "low",
+      "latency_risk": "medium",
+      "advice": "scale_up",
+      "message": "Increasing capacity to handle growing demands. Monitor performance after upgrade."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "low",
+      "latency_risk": "high",
+      "advice": "reduce",
+      "message": "Considering high latency risk, scale down capacity to prevent overload and maintain performance."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "medium",
+      "latency_risk": "low",
+      "advice": "scale_up",
+      "message": "Capacity utilization is approaching high, consider scaling up to handle increased demand"
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "medium",
+      "latency_risk": "medium",
+      "advice": "stabilize",
+      "message": "Monitor load levels closely and adjust capacity or latency adjustments as needed to maintain stability."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "medium",
+      "latency_risk": "high",
+      "advice": "scale_up",
+      "message": "Increasing capacity to mitigate latency risk, while maintaining load level to avoid overloading."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "high",
+      "latency_risk": "low",
+      "advice": "scale_up",
+      "message": "Capacity level is high, consider scaling up to handle increased load."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "high",
+      "latency_risk": "medium",
+      "advice": "scale_up",
+      "message": "System is experiencing high load, recommend increasing capacity to maintain performance and prevent potential downtime."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "high",
+      "latency_risk": "high",
+      "advice": "scale_up",
+      "message": "System is experiencing high latency risk and medium load; increasing capacity should help alleviate latency and ensure system stability."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "low",
+      "latency_risk": "low",
+      "advice": "scale_up",
+      "message": "Increasing capacity to mitigate high load and latency risks."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "low",
+      "latency_risk": "medium",
+      "advice": "scale_up",
+      "message": "System is under heavy load, consider increasing capacity to maintain performance."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "low",
+      "latency_risk": "high",
+      "advice": "reduce",
+      "message": "Reducing load to avoid capacity issues and latency risks"
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "medium",
+      "latency_risk": "low",
+      "advice": "scale_up",
+      "message": "Capacity utilization is too high, scaling up is recommended to maintain system performance and prevent potential failures."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "medium",
+      "latency_risk": "medium",
+      "advice": "scale_up",
+      "message": "High load requires immediate scaling to ensure system reliability and performance, while latency risk should be monitored to prevent further degradation."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "medium",
+      "latency_risk": "high",
+      "advice": "scale_up",
+      "message": "System is experiencing high load and high latency risk. Increase capacity to mitigate these risks."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "high",
+      "latency_risk": "low",
+      "advice": "scale_up",
+      "message": "High load and capacity indicate a need for increased resources. Scaling up can help mitigate latency risks."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "high",
+      "latency_risk": "medium",
+      "advice": "scale_up",
+      "message": "System is experiencing high load and high capacity usage, consider scaling up resources to maintain performance and stability."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "high",
+      "latency_risk": "high",
+      "advice": "scale_up",
+      "message": "System is experiencing high load and capacity usage; immediate scaling up is recommended to prevent performance degradation."
+    }
+  ]
+}

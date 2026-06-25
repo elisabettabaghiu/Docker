@@ -1,0 +1,5 @@
+idx,load_level,capacity_level,latency_risk,advice,latenza_ms,prompt_ms,predicted_ms,tok_sec,prompt_tokens,completion_tokens,cached_tokens,cpu_media,cpu_max,ram_media_mb,ram_max_mb
+1,low,low,low,unknown,0,0,0,0,0,0,0,0.0,0.0,2937.7,2937.7
+2,low,low,medium,unknown,0,0,0,0,0,0,0,20.4,20.4,3004.2,3004.2
+3,low,low,high,unknown,0,0,0,0,0,0,0,7.0,7.0,2947.2,2947.2
+4,low,medium,low,unknown,0,0,0,0,0,0,0,13.1,13.1,3010.1,3010.1

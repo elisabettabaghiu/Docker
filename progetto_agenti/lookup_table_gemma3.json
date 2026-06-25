@@ -1,0 +1,215 @@
+{
+  "metadata": {
+    "model": "gemma3:latest",
+    "generated": "2026-06-25T15:35:12.955780",
+    "variables": {
+      "load_level": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "capacity_level": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "latency_risk": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "total_combinations": 27
+  },
+  "lookup_table": [
+    {
+      "load_level": "low",
+      "capacity_level": "low",
+      "latency_risk": "low",
+      "advice": "stable",
+      "message": "Current system health is good with low load and minimal risk. Continue operating as is without immediate adjustments."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "low",
+      "latency_risk": "medium",
+      "advice": "redistribute",
+      "message": "The medium latency risk suggests uneven load distribution. Redistributing tasks across available nodes will likely improve performance and stability."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "low",
+      "latency_risk": "high",
+      "advice": "redistribute",
+      "message": "High latency risk indicates uneven load distribution. Immediately redistribute requests to improve responsiveness and mitigate the current issue."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "medium",
+      "latency_risk": "low",
+      "advice": "stable",
+      "message": "Current system state is healthy with low load and minimal risk. Continue operations as is, monitoring for any unexpected changes."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "medium",
+      "latency_risk": "medium",
+      "advice": "redistribute",
+      "message": "The medium latency risk suggests uneven load distribution. Redistributing tasks to different nodes will likely improve performance and stabilize the system."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "medium",
+      "latency_risk": "high",
+      "advice": "redistribute",
+      "message": "High latency risk indicates uneven load distribution. Immediately redistribute requests to mitigate performance issues and prevent further degradation."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "high",
+      "latency_risk": "low",
+      "advice": "stable",
+      "message": "Current system health is optimal with low load, high capacity, and minimal latency risk. Continue with existing operations as planned."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "high",
+      "latency_risk": "medium",
+      "advice": "redistribute",
+      "message": "The current load is low with high capacity, but medium latency risk suggests distributing requests to improve responsiveness and prevent bottlenecks."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "high",
+      "latency_risk": "high",
+      "advice": "redistribute",
+      "message": "High latency risk indicates uneven load distribution. Redistribute tasks to balance the system and mitigate the immediate performance issue."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "low",
+      "latency_risk": "low",
+      "advice": "redistribute",
+      "message": "The medium load and low capacity suggest distributing the workload to improve responsiveness. Monitor performance after redistribution to ensure stability."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "low",
+      "latency_risk": "medium",
+      "advice": "redistribute",
+      "message": "The medium load and low capacity suggest uneven distribution. Redistributing tasks across available nodes will help alleviate pressure and improve responsiveness."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "low",
+      "latency_risk": "high",
+      "advice": "redistribute",
+      "message": "High latency risk indicates uneven workload distribution. Immediately redistribute tasks across available nodes to alleviate pressure and improve response times."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "medium",
+      "latency_risk": "low",
+      "advice": "stable",
+      "message": "Current load and latency are manageable; continue operating as is. Monitor for any unexpected changes in the near future."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "medium",
+      "latency_risk": "medium",
+      "advice": "redistribute",
+      "message": "The medium load and latency risk suggest uneven distribution of requests. Redistributing tasks across available nodes will likely improve performance and reduce bottlenecks."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "medium",
+      "latency_risk": "high",
+      "advice": "redistribute",
+      "message": "High latency risk indicates uneven load distribution. Redistribute tasks to mitigate performance bottlenecks and improve responsiveness."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "high",
+      "latency_risk": "low",
+      "advice": "stable",
+      "message": "Current load and capacity are well-managed, and latency is low. Continue monitoring for any significant changes."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "high",
+      "latency_risk": "medium",
+      "advice": "redistribute",
+      "message": "The medium load and medium latency risk suggest distributing the workload across multiple nodes to improve responsiveness and avoid bottlenecks. Consider prioritizing requests based on urgency."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "high",
+      "latency_risk": "high",
+      "advice": "redistribute",
+      "message": "High latency risk indicates uneven load distribution; immediately redistribute tasks to balance the system and mitigate performance issues."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "low",
+      "latency_risk": "low",
+      "advice": "redistribute",
+      "message": "With high load and low capacity, immediate redistribution of tasks is crucial to alleviate pressure and improve responsiveness. Monitor closely to ensure the redistribution effectively addresses the current bottleneck."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "low",
+      "latency_risk": "medium",
+      "advice": "redistribute",
+      "message": "High load and low capacity indicate a need to distribute the workload across multiple servers to alleviate pressure. Prioritize tasks and consider dynamic routing to optimize resource utilization."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "low",
+      "latency_risk": "high",
+      "advice": "redistribute",
+      "message": "High load and low capacity necessitate immediate workload redistribution to improve performance and mitigate latency risk. Prioritize tasks and consider shifting some to less stressed nodes."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "medium",
+      "latency_risk": "low",
+      "advice": "redistribute",
+      "message": "With high load and medium capacity, redistributing tasks to available nodes will help alleviate pressure and maintain low latency risk."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "medium",
+      "latency_risk": "medium",
+      "advice": "redistribute",
+      "message": "With a high load and medium capacity, redistributing tasks to available resources is crucial to mitigate the medium latency risk. Prioritize distributing requests to less burdened servers to improve responsiveness."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "medium",
+      "latency_risk": "high",
+      "advice": "redistribute",
+      "message": "High load and latency risk necessitate immediate redistribution of tasks to improve system responsiveness and prevent further degradation. Prioritize distributing requests to less burdened nodes."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "high",
+      "latency_risk": "low",
+      "advice": "accept",
+      "message": "Current system health is optimal; continued operation at the present load level is acceptable. Monitoring remains recommended to proactively address any future changes."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "high",
+      "latency_risk": "medium",
+      "advice": "redistribute",
+      "message": "High load and latency indicate a need to distribute the workload across multiple nodes. Prioritize tasks and consider moving some requests to less stressed servers to alleviate the pressure."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "high",
+      "latency_risk": "high",
+      "advice": "redistribute",
+      "message": "High load, capacity, and latency indicate a need to distribute the workload across multiple servers to alleviate the pressure and improve responsiveness."
+    }
+  ]
+}

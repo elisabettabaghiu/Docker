@@ -1,0 +1,215 @@
+{
+  "metadata": {
+    "model": "deepseek-r1-distill-llama:latest",
+    "generated": "2026-06-25T15:30:49.977731",
+    "variables": {
+      "load_level": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "capacity_level": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "latency_risk": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "total_combinations": 27
+  },
+  "lookup_table": [
+    {
+      "load_level": "low",
+      "capacity_level": "low",
+      "latency_risk": "low",
+      "advice": "scale_up",
+      "message": "System is stable with room for growth. Scale up to optimize capacity."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "low",
+      "latency_risk": "medium",
+      "advice": "redistribute",
+      "message": "The system has low load and capacity, with a medium latency risk. Redistributing resources can balance the system and reduce latency."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "low",
+      "latency_risk": "high",
+      "advice": "scale_up",
+      "message": "The system is stable but experiences latency risks; scaling up could enhance performance."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "medium",
+      "latency_risk": "low",
+      "advice": "accept",
+      "message": "The system is ready to accept additional tasks with low latency risk and moderate capacity."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "medium",
+      "latency_risk": "medium",
+      "advice": "redistribute",
+      "message": "The system has moderate load and capacity, with a notable latency risk. Redistributing the load across resources can improve efficiency and reduce latency."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "medium",
+      "latency_risk": "high",
+      "advice": "optimize",
+      "message": "The system's medium capacity and high latency risk suggest optimizing performance for efficient resource use and reduced delays."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "high",
+      "latency_risk": "low",
+      "advice": "reduce",
+      "message": "The system is stable with high capacity; consider reducing load to optimize performance."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "high",
+      "latency_risk": "medium",
+      "advice": "redistribute",
+      "message": "Current system load is low, but capacity is high. Proactively redistributing load may help minimize latency risks."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "high",
+      "latency_risk": "high",
+      "advice": "scale_up",
+      "message": "We are scaling up to utilize available capacity while maintaining performance."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "low",
+      "latency_risk": "low",
+      "advice": "scale_up",
+      "message": "The system is performing adequately under medium load but is constrained by low capacity."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "low",
+      "latency_risk": "medium",
+      "advice": "scale_up",
+      "message": "The system's capacity is low and latency risk is medium; scaling up is recommended to improve performance."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "low",
+      "latency_risk": "high",
+      "advice": "scale_up",
+      "message": "The system's load is manageable, but capacity is underutilized, and high latency risks are present. Strategic scaling is recommended to enhance performance and efficiency."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "medium",
+      "latency_risk": "low",
+      "advice": "scale_up",
+      "message": "Given the current medium load and capacity levels, and low latency risk, scaling up is advisable to handle increased workloads efficiently without significant delays."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "medium",
+      "latency_risk": "medium",
+      "advice": "optimize",
+      "message": "Current system state suggests optimizing performance to handle medium load and latency risk effectively."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "medium",
+      "latency_risk": "high",
+      "advice": "redistribute",
+      "message": "The system's medium load and high latency risk suggest optimizing resource distribution to improve efficiency and reduce delays."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "high",
+      "latency_risk": "low",
+      "advice": "accept",
+      "message": "The system is stable with high capacity and low latency risk, ready to accept increased load."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "high",
+      "latency_risk": "medium",
+      "advice": "redistribute",
+      "message": "The system is stable, but load balancing can enhance performance and reduce latency."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "high",
+      "latency_risk": "high",
+      "advice": "redistribute",
+      "message": "The system's performance is currently fluctuating due to high latency risk. Redistribution is recommended to balance resource utilization and reduce latency."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "low",
+      "latency_risk": "low",
+      "advice": "scale_up",
+      "message": "The system is under high load with limited capacity, requiring immediate scaling to avoid performance degradation."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "low",
+      "latency_risk": "medium",
+      "advice": "scale_up",
+      "message": "System load is high and capacity is low, necessitating scaling to mitigate latency risks."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "low",
+      "latency_risk": "high",
+      "advice": "offload",
+      "message": "The system is overloaded; offloading tasks can reduce the load and prevent high latency."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "medium",
+      "latency_risk": "low",
+      "advice": "redistribute",
+      "message": "The system is handling high load with medium capacity effectively. Redistributing the load can optimize performance and efficiency."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "medium",
+      "latency_risk": "medium",
+      "advice": "offload",
+      "message": "High load is putting pressure on the system. Offloading tasks could help reduce latency and stabilize performance."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "medium",
+      "latency_risk": "high",
+      "advice": "scale_up",
+      "message": "System is operating at high load with medium capacity, posing a high latency risk. Scaling up resources is recommended to improve performance."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "high",
+      "latency_risk": "low",
+      "advice": "scale_up",
+      "message": "Given high load and high capacity with low latency risk, scaling up is advisable to maintain performance and prepare for future growth."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "high",
+      "latency_risk": "medium",
+      "advice": "stable",
+      "message": "The system is handling high load with moderate latency risk, maintaining stability despite current conditions."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "high",
+      "latency_risk": "high",
+      "advice": "scale_up",
+      "message": "The system is operating at maximum capacity with high latency risks. To improve performance, we recommend scaling up to better handle the load."
+    }
+  ]
+}
