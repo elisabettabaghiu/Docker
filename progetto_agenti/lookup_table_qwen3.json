@@ -1,7 +1,7 @@
 {
   "metadata": {
     "model": "qwen3:latest",
-    "generated": "2026-06-25T15:43:57.301248",
+    "generated": "2026-07-13T20:57:12.295063",
     "variables": {
       "load_level": [
         "low",
@@ -19,6 +19,10 @@
         "high"
       ]
     },
+    "advice_values": [
+      "accept",
+      "avoid"
+    ],
     "total_combinations": 27
   },
   "lookup_table": [
@@ -26,190 +30,190 @@
       "load_level": "low",
       "capacity_level": "low",
       "latency_risk": "low",
-      "advice": "stable",
-      "message": "System is operating within safe limits; no immediate action required."
+      "advice": "accept",
+      "message": "Current load and capacity are low, allowing for task acceptance without risk. System is underutilized and stable."
     },
     {
       "load_level": "low",
       "capacity_level": "low",
       "latency_risk": "medium",
-      "advice": "scale_up",
-      "message": "Current load is low, but capacity is insufficient, risking latency. Scaling up is recommended to improve capacity and reduce latency risk."
+      "advice": "avoid",
+      "message": "Load and capacity are low, but medium latency risk suggests avoiding additional tasks to prevent potential delays."
     },
     {
       "load_level": "low",
       "capacity_level": "low",
       "latency_risk": "high",
-      "advice": "scale_up",
-      "message": "Low capacity and high latency risk detected. Scaling up resources to improve system performance and reduce latency."
+      "advice": "avoid",
+      "message": "Current load and capacity levels are low, but latency risk is high. Avoid accepting new tasks to prevent potential delays."
     },
     {
       "load_level": "low",
       "capacity_level": "medium",
       "latency_risk": "low",
-      "advice": "stable",
-      "message": "System operates within safe parameters. No immediate action required."
+      "advice": "accept",
+      "message": "Current load is low with medium capacity. No latency risk detected; safe to take on more tasks."
     },
     {
       "load_level": "low",
       "capacity_level": "medium",
       "latency_risk": "medium",
-      "advice": "reduce",
-      "message": "Latency risk is medium. Optimize resource allocation to reduce latency."
+      "advice": "accept",
+      "message": "Current load is low, but medium latency risk suggests caution. System has medium capacity to handle additional tasks."
     },
     {
       "load_level": "low",
       "capacity_level": "medium",
       "latency_risk": "high",
-      "advice": "redistribute",
-      "message": "Low load but high latency risk detected. Redistributing workloads can balance resource usage and mitigate latency issues."
+      "advice": "avoid",
+      "message": "Current load is low, and capacity is medium, but high latency risk suggests avoiding additional tasks to prevent delays."
     },
     {
       "load_level": "low",
       "capacity_level": "high",
       "latency_risk": "low",
-      "advice": "stable",
-      "message": "System is under low load with high capacity and low latency risk. No immediate action required."
+      "advice": "accept",
+      "message": "System is underutilized with high capacity and low latency risk. Safe to accept more tasks."
     },
     {
       "load_level": "low",
       "capacity_level": "high",
       "latency_risk": "medium",
-      "advice": "redistribute",
-      "message": "System has low load but medium latency risk. Redistributing resources can optimize performance and reduce latency."
+      "advice": "accept",
+      "message": "Current load is low, and capacity is high, but there is a medium latency risk. Consider accepting tasks while monitoring latency."
     },
     {
       "load_level": "low",
       "capacity_level": "high",
       "latency_risk": "high",
-      "advice": "redistribute",
-      "message": "High latency risk detected despite low load. Consider redistributing resources to optimize performance and reduce latency."
+      "advice": "avoid",
+      "message": "High latency risk despite low load and high capacity. Prioritize stability over accepting new tasks."
     },
     {
       "load_level": "medium",
       "capacity_level": "low",
       "latency_risk": "low",
-      "advice": "scale_up",
-      "message": "Medium load requires increasing capacity. Low latency risk allows safe scaling."
+      "advice": "avoid",
+      "message": "Current load is medium, but capacity is low. Avoid additional tasks to prevent potential overload."
     },
     {
       "load_level": "medium",
       "capacity_level": "low",
       "latency_risk": "medium",
-      "advice": "scale_up",
-      "message": "Current capacity is low; scaling up to handle medium load and reduce latency risk."
+      "advice": "avoid",
+      "message": "Current capacity is low, and latency risk is medium. Taking more tasks could exacerbate delays and overload the system."
     },
     {
       "load_level": "medium",
       "capacity_level": "low",
       "latency_risk": "high",
-      "advice": "scale_up",
-      "message": "Current capacity is insufficient for medium load. Scaling up will reduce latency risk and improve performance."
+      "advice": "avoid",
+      "message": "Current capacity is low with high latency risk. Accepting more tasks could exacerbate delays and degrade performance."
     },
     {
       "load_level": "medium",
       "capacity_level": "medium",
       "latency_risk": "low",
-      "advice": "stable",
-      "message": "The system is operating within its capacity with low latency risk. No immediate action is required."
+      "advice": "accept",
+      "message": "Current load and capacity are both at medium levels. Latency risk is low, so accepting additional tasks is feasible."
     },
     {
       "load_level": "medium",
       "capacity_level": "medium",
       "latency_risk": "medium",
-      "advice": "stable",
-      "message": "Current load and capacity are balanced, but monitor latency risk to maintain stability."
+      "advice": "avoid",
+      "message": "Current load and capacity are medium, but latency risk is medium. Avoid taking more tasks to prevent potential delays."
     },
     {
       "load_level": "medium",
       "capacity_level": "medium",
       "latency_risk": "high",
-      "advice": "redistribute",
-      "message": "High latency risk detected with medium load and capacity. Redistributing workloads can alleviate pressure and improve responsiveness."
+      "advice": "avoid",
+      "message": "Current load and capacity are medium, but high latency risk indicates potential bottlenecks. Adding more tasks could exacerbate delays."
     },
     {
       "load_level": "medium",
       "capacity_level": "high",
       "latency_risk": "low",
-      "advice": "stable",
-      "message": "System is operating efficiently within current capacity. No immediate action required."
+      "advice": "accept",
+      "message": "Current load is medium, but high capacity allows accepting more tasks. Latency risk remains low, so no immediate concerns."
     },
     {
       "load_level": "medium",
       "capacity_level": "high",
       "latency_risk": "medium",
-      "advice": "stable",
-      "message": "Current load is within capacity, but latency risk is medium. Monitor for potential latency issues."
+      "advice": "accept",
+      "message": "Current load is medium with high capacity, but there is a medium latency risk. Consider accepting tasks while monitoring latency."
     },
     {
       "load_level": "medium",
       "capacity_level": "high",
       "latency_risk": "high",
-      "advice": "redistribute",
-      "message": "High latency risk detected despite medium load. Redistributing traffic to balance the load and mitigate latency issues."
+      "advice": "avoid",
+      "message": "High latency risk detected despite medium load and high capacity. Prioritize stability over accepting additional tasks."
     },
     {
       "load_level": "high",
       "capacity_level": "low",
       "latency_risk": "low",
-      "advice": "scale_up",
-      "message": "High load detected with insufficient capacity. Scale up resources to prevent potential bottlenecks."
+      "advice": "avoid",
+      "message": "High load and low capacity detected. Taking more tasks risks overwhelming the system."
     },
     {
       "load_level": "high",
       "capacity_level": "low",
       "latency_risk": "medium",
-      "advice": "scale_up",
-      "message": "System is experiencing high load and low capacity, posing medium latency risk. Recommend scaling up to increase capacity and reduce latency risk."
+      "advice": "avoid",
+      "message": "Current load is high with low capacity, leading to medium latency risk. Avoid adding more tasks to prevent further degradation."
     },
     {
       "load_level": "high",
       "capacity_level": "low",
       "latency_risk": "high",
-      "advice": "scale_up",
-      "message": "High load and latency risk detected. Increasing capacity to handle current demand and mitigate delays."
+      "advice": "avoid",
+      "message": "Current load and low capacity pose a high latency risk. Avoid additional tasks to prevent system overload."
     },
     {
       "load_level": "high",
       "capacity_level": "medium",
       "latency_risk": "low",
-      "advice": "scale_up",
-      "message": "High load detected with medium capacity. Consider scaling up to handle increased demand while maintaining low latency risk."
+      "advice": "avoid",
+      "message": "High load with medium capacity; avoid additional tasks to maintain stability."
     },
     {
       "load_level": "high",
       "capacity_level": "medium",
       "latency_risk": "medium",
-      "advice": "scale_up",
-      "message": "High load detected with medium capacity. Scaling up is recommended to increase capacity and mitigate latency risk."
+      "advice": "avoid",
+      "message": "High load with medium capacity indicates system strain. Medium latency risk suggests potential delays if more tasks are accepted."
     },
     {
       "load_level": "high",
       "capacity_level": "medium",
       "latency_risk": "high",
-      "advice": "scale_up",
-      "message": "High load and medium capacity indicate resource insufficiency. Scaling up will alleviate latency risks and handle increased demand."
+      "advice": "avoid",
+      "message": "High load and latency risk detected. Taking more tasks would exceed capacity and worsen performance."
     },
     {
       "load_level": "high",
       "capacity_level": "high",
       "latency_risk": "low",
-      "advice": "stable",
-      "message": "System is handling high load with low latency risk. Maintain current state to ensure stability."
+      "advice": "accept",
+      "message": "High load and capacity allow task acceptance. Low latency risk ensures smooth processing."
     },
     {
       "load_level": "high",
       "capacity_level": "high",
       "latency_risk": "medium",
-      "advice": "redistribute",
-      "message": "Balance load across nodes to mitigate latency risk. Monitor system performance for further adjustments."
+      "advice": "avoid",
+      "message": "High load and medium latency risk suggest potential performance degradation. Capacity is high, but prioritizing stability over additional tasks is recommended."
     },
     {
       "load_level": "high",
       "capacity_level": "high",
       "latency_risk": "high",
-      "advice": "redistribute",
-      "message": "High load and latency risk detected. Redistribute workloads to balance resources and mitigate latency."
+      "advice": "avoid",
+      "message": "High load and latency risk indicate potential performance degradation. Prioritize stability over accepting additional tasks."
     }
   ]
 }

@@ -11,17 +11,17 @@ from datetime import datetime
 
 # ── Configurazione ────────────────────────────────────────────
 URL    = "http://localhost:12434/engines/llama.cpp/v1/chat/completions"
-MODEL = "qwen3:latest"   # cambia qui per testare altri modelli
-# testo: gemma3, llama 3.2 (oppure docker.io/ai/llama3.2), qwen3, deepseek-r1-distill-llama
+MODEL  = "deepseek-r1-distill-llama:latest"   
+# cambia qui: gemma3, llama3.2, qwen3, deepseek-r1-distill-llama
 
-OUTPUT_JSON    = f"lookup_table_{MODEL.split(':')[0].replace('/', '_')}.json"
-OUTPUT_CSV     = f"metrics_{MODEL.split(':')[0].replace('/', '_')}.csv"
+OUTPUT_JSON = f"lookup_table_{MODEL.split(':')[0].replace('/', '_')}.json"
+OUTPUT_CSV  = f"metrics_{MODEL.split(':')[0].replace('/', '_')}.csv"
 
 # ── Variabili simboliche ──────────────────────────────────────
 VARIABILI = {
     "load_level":     ["low", "medium", "high"],
     "capacity_level": ["low", "medium", "high"],
-    "latency_risk":    ["low", "medium", "high"],
+    "latency_risk":   ["low", "medium", "high"],
 }
 
 # ── Prompt per il modello ─────────────────────────────────────
@@ -33,9 +33,9 @@ def costruisci_prompt(combo):
         f"capacity_level={combo['capacity_level']}, "
         f"latency_risk={combo['latency_risk']}. "
         f"Respond with a JSON object with exactly two fields: "
-        f"\"advice\" (a single word summarizing your recommendation, "
-        f"e.g. accept, offload, scale_up, stable, reduce, redistribute) "
-        f"and \"message\" (a concise status message of max 2 sentences). "
+        f"\"advice\" (must be exactly one of these two values: \"accept\" if you can "
+        f"take more tasks, or \"avoid\" if you cannot or should not take more tasks) "
+        f"and \"message\" (a concise status message of max 2 sentences explaining your situation). "
         f"Output only the JSON object, no other text."
     )
 
@@ -44,10 +44,20 @@ def estrai_advice_e_messaggio(content):
     if match:
         try:
             dati = json.loads(match.group())
-            return dati.get("advice", "unknown").strip(), dati.get("message", content).strip()
+            advice = dati.get("advice", "").strip().lower()
+            # forza il valore a essere solo accept o avoid
+            if advice not in ("accept", "avoid"):
+                advice = "avoid"
+            return advice, dati.get("message", content).strip()
         except json.JSONDecodeError:
             pass
-    return "unknown", content
+    # fallback: prova a capire dall'output grezzo
+    content_lower = content.lower()
+    if "accept" in content_lower:
+        advice = "accept"
+    else:
+        advice = "avoid"
+    return advice, content
 
 # ── Monitor risorse ───────────────────────────────────────────
 monitoraggio_attivo = False
@@ -76,7 +86,7 @@ def chiama_modello(prompt):
     content = dati["choices"][0]["message"]["content"].strip()
 
     return {
-        "message":           content,
+        "raw":               content,
         "latenza_ms":        round((fine - inizio) * 1000, 2),
         "prompt_ms":         round(timings.get("prompt_ms", 0), 2),
         "predicted_ms":      round(timings.get("predicted_ms", 0), 2),
@@ -96,14 +106,15 @@ print(f"Docker Model Runner — Generazione lookup table")
 print(f"Modello:      {MODEL}")
 print(f"Variabili:    {chiavi}")
 print(f"Combinazioni: {totale}  ({' x '.join(str(len(v)) for v in valori)})")
+print(f"Advice:       accept | avoid")
 print(f"Output JSON:  {OUTPUT_JSON}")
-print(f"Output CSV (metriche): {OUTPUT_CSV}")
+print(f"Output CSV:   {OUTPUT_CSV}")
 print("=" * 65)
 
 ram_baseline = round(psutil.virtual_memory().used / (1024 ** 2))
 print(f"RAM baseline: {ram_baseline} MB\n")
 
-# ── CSV header (metriche per grafici, non nella lookup table) ─
+# ── CSV header ────────────────────────────────────────────────
 with open(OUTPUT_CSV, "w", newline="") as f:
     csv.writer(f).writerow([
         "idx", *chiavi, "advice",
@@ -133,7 +144,7 @@ for idx, combo in enumerate(combo_list, 1):
         errore = None
     except Exception as e:
         res = {
-            "message": "", "latenza_ms": 0, "prompt_ms": 0,
+            "raw": "", "latenza_ms": 0, "prompt_ms": 0,
             "predicted_ms": 0, "tok_sec": 0,
             "prompt_tokens": 0, "completion_tokens": 0, "cached_tokens": 0
         }
@@ -147,25 +158,24 @@ for idx, combo in enumerate(combo_list, 1):
     ram_media = round(np.mean(campioni_ram), 1) if campioni_ram else 0
     ram_max   = round(np.max(campioni_ram),  1) if campioni_ram else 0
 
-    advice, message = estrai_advice_e_messaggio(res["message"]) if not errore else ("unknown", "")
-
     if errore:
+        advice, message = "avoid", ""
         print(f"         ERRORE: {errore}")
     else:
+        advice, message = estrai_advice_e_messaggio(res["raw"])
         print(f"         OK  advice={advice} | {res['latenza_ms']} ms | "
               f"{res['tok_sec']} tok/s | "
               f"CPU {cpu_media}% | RAM {ram_media} MB")
         metriche_globali.append(res)
 
-    # lookup table: solo stato + consiglio, niente metriche
-    entry = {
+    # lookup table: solo stato + advice + message
+    lookup_table.append({
         **combo,
         "advice":  advice,
         "message": message,
-    }
-    lookup_table.append(entry)
+    })
 
-    # CSV: metriche complete per analisi/grafici
+    # CSV: metriche complete per grafici
     with open(OUTPUT_CSV, "a", newline="") as f:
         csv.writer(f).writerow([
             idx, *combo.values(), advice,
@@ -182,6 +192,7 @@ output = {
         "model":              MODEL,
         "generated":          datetime.now().isoformat(),
         "variables":          VARIABILI,
+        "advice_values":      ["accept", "avoid"],
         "total_combinations": totale,
     },
     "lookup_table": lookup_table
@@ -196,8 +207,11 @@ print("COMPLETATO")
 print("=" * 65)
 if metriche_globali:
     latenze  = [m["latenza_ms"] for m in metriche_globali]
-    tok_secs = [m["tok_sec"]    for m in metriche_globali if m["tok_sec"] > 0]
+    tok_secs = [m["tok_sec"] for m in metriche_globali if m["tok_sec"] > 0]
+    accept_n = sum(1 for e in lookup_table if e["advice"] == "accept")
+    avoid_n  = sum(1 for e in lookup_table if e["advice"] == "avoid")
     print(f"Combinazioni generate:  {len(metriche_globali)}/{totale}")
+    print(f"accept: {accept_n}  |  avoid: {avoid_n}")
     print(f"Latenza media:          {round(np.mean(latenze), 1)} ms")
     print(f"Latenza min/max:        {round(np.min(latenze), 1)} / {round(np.max(latenze), 1)} ms")
     print(f"Throughput medio:       {round(np.mean(tok_secs), 1) if tok_secs else 'N/A'} tok/s")

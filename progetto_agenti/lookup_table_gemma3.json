@@ -1,7 +1,7 @@
 {
   "metadata": {
     "model": "gemma3:latest",
-    "generated": "2026-06-25T15:35:12.955780",
+    "generated": "2026-07-13T20:54:26.180954",
     "variables": {
       "load_level": [
         "low",
@@ -19,6 +19,10 @@
         "high"
       ]
     },
+    "advice_values": [
+      "accept",
+      "avoid"
+    ],
     "total_combinations": 27
   },
   "lookup_table": [
@@ -26,190 +30,190 @@
       "load_level": "low",
       "capacity_level": "low",
       "latency_risk": "low",
-      "advice": "stable",
-      "message": "Current system health is good with low load and minimal risk. Continue operating as is without immediate adjustments."
+      "advice": "accept",
+      "message": "Current load and capacity are low, posing no significant risk. I can comfortably accept additional tasks without impacting performance."
     },
     {
       "load_level": "low",
       "capacity_level": "low",
       "latency_risk": "medium",
-      "advice": "redistribute",
-      "message": "The medium latency risk suggests uneven load distribution. Redistributing tasks across available nodes will likely improve performance and stability."
+      "advice": "avoid",
+      "message": "Current load is low and latency risk is medium, so accepting additional tasks could negatively impact performance. Prioritizing existing requests is recommended."
     },
     {
       "load_level": "low",
       "capacity_level": "low",
       "latency_risk": "high",
-      "advice": "redistribute",
-      "message": "High latency risk indicates uneven load distribution. Immediately redistribute requests to improve responsiveness and mitigate the current issue."
+      "advice": "avoid",
+      "message": "High latency risk combined with low capacity indicates the system is currently overloaded and unable to handle additional tasks safely. Prioritizing existing requests and stabilizing the system is the immediate focus."
     },
     {
       "load_level": "low",
       "capacity_level": "medium",
       "latency_risk": "low",
-      "advice": "stable",
-      "message": "Current system state is healthy with low load and minimal risk. Continue operations as is, monitoring for any unexpected changes."
+      "advice": "accept",
+      "message": "Current load is low and capacity is medium, allowing me to comfortably accept additional tasks. Latency risk remains low, so I can handle increased demand without issue."
     },
     {
       "load_level": "low",
       "capacity_level": "medium",
       "latency_risk": "medium",
-      "advice": "redistribute",
-      "message": "The medium latency risk suggests uneven load distribution. Redistributing tasks to different nodes will likely improve performance and stabilize the system."
+      "advice": "avoid",
+      "message": "My current load is already at medium, and the latency risk is elevated. Taking on more tasks could negatively impact response times."
     },
     {
       "load_level": "low",
       "capacity_level": "medium",
       "latency_risk": "high",
-      "advice": "redistribute",
-      "message": "High latency risk indicates uneven load distribution. Immediately redistribute requests to mitigate performance issues and prevent further degradation."
+      "advice": "avoid",
+      "message": "High latency risk indicates the system is currently overloaded. Accepting more tasks would likely further degrade performance."
     },
     {
       "load_level": "low",
       "capacity_level": "high",
       "latency_risk": "low",
-      "advice": "stable",
-      "message": "Current system health is optimal with low load, high capacity, and minimal latency risk. Continue with existing operations as planned."
+      "advice": "accept",
+      "message": "With low load and high capacity, I can comfortably handle additional tasks. Proceed with accepting new requests to maximize resource utilization."
     },
     {
       "load_level": "low",
       "capacity_level": "high",
       "latency_risk": "medium",
-      "advice": "redistribute",
-      "message": "The current load is low with high capacity, but medium latency risk suggests distributing requests to improve responsiveness and prevent bottlenecks."
+      "advice": "accept",
+      "message": "With low load and high capacity, I can comfortably handle additional tasks. I'm operating within optimal parameters and ready to accept more work."
     },
     {
       "load_level": "low",
       "capacity_level": "high",
       "latency_risk": "high",
-      "advice": "redistribute",
-      "message": "High latency risk indicates uneven load distribution. Redistribute tasks to balance the system and mitigate the immediate performance issue."
+      "advice": "avoid",
+      "message": "High latency risk combined with low load suggests the system is near capacity and further increases would exacerbate performance issues."
     },
     {
       "load_level": "medium",
       "capacity_level": "low",
       "latency_risk": "low",
-      "advice": "redistribute",
-      "message": "The medium load and low capacity suggest distributing the workload to improve responsiveness. Monitor performance after redistribution to ensure stability."
+      "advice": "accept",
+      "message": "The load is at medium and capacity is low, but the latency risk is currently low. I can likely handle additional tasks within acceptable performance bounds."
     },
     {
       "load_level": "medium",
       "capacity_level": "low",
       "latency_risk": "medium",
-      "advice": "redistribute",
-      "message": "The medium load and low capacity suggest uneven distribution. Redistributing tasks across available nodes will help alleviate pressure and improve responsiveness."
+      "advice": "avoid",
+      "message": "Current load is medium and capacity is low, increasing latency risk. It's best to avoid taking on additional tasks to maintain system stability."
     },
     {
       "load_level": "medium",
       "capacity_level": "low",
       "latency_risk": "high",
-      "advice": "redistribute",
-      "message": "High latency risk indicates uneven workload distribution. Immediately redistribute tasks across available nodes to alleviate pressure and improve response times."
+      "advice": "avoid",
+      "message": "Current load is high, capacity is low, and latency risk is critically elevated. Accepting further tasks would likely exacerbate these issues."
     },
     {
       "load_level": "medium",
       "capacity_level": "medium",
       "latency_risk": "low",
-      "advice": "stable",
-      "message": "Current load and latency are manageable; continue operating as is. Monitor for any unexpected changes in the near future."
+      "advice": "accept",
+      "message": "My current load and capacity are moderate, and the latency risk is low. I can comfortably handle additional tasks without significant issues."
     },
     {
       "load_level": "medium",
       "capacity_level": "medium",
       "latency_risk": "medium",
-      "advice": "redistribute",
-      "message": "The medium load and latency risk suggest uneven distribution of requests. Redistributing tasks across available nodes will likely improve performance and reduce bottlenecks."
+      "advice": "avoid",
+      "message": "Current load and latency risk are elevated, requiring us to reduce incoming task requests to maintain stability and performance."
     },
     {
       "load_level": "medium",
       "capacity_level": "medium",
       "latency_risk": "high",
-      "advice": "redistribute",
-      "message": "High latency risk indicates uneven load distribution. Redistribute tasks to mitigate performance bottlenecks and improve responsiveness."
+      "advice": "avoid",
+      "message": "High latency risk combined with medium load and capacity indicates an unsustainable situation. Accepting more tasks would likely severely degrade performance."
     },
     {
       "load_level": "medium",
       "capacity_level": "high",
       "latency_risk": "low",
-      "advice": "stable",
-      "message": "Current load and capacity are well-managed, and latency is low. Continue monitoring for any significant changes."
+      "advice": "accept",
+      "message": "With a medium load and high capacity, I can comfortably accept additional tasks. Latency risk remains low, indicating a stable operational environment."
     },
     {
       "load_level": "medium",
       "capacity_level": "high",
       "latency_risk": "medium",
-      "advice": "redistribute",
-      "message": "The medium load and medium latency risk suggest distributing the workload across multiple nodes to improve responsiveness and avoid bottlenecks. Consider prioritizing requests based on urgency."
+      "advice": "accept",
+      "message": "The system's load is moderate and capacity is high, allowing us to accept additional tasks. However, we still have a medium latency risk, so prioritize tasks carefully."
     },
     {
       "load_level": "medium",
       "capacity_level": "high",
       "latency_risk": "high",
-      "advice": "redistribute",
-      "message": "High latency risk indicates uneven load distribution; immediately redistribute tasks to balance the system and mitigate performance issues."
+      "advice": "avoid",
+      "message": "High latency risk combined with medium load indicates the system is nearing capacity. Accepting additional tasks could significantly degrade performance."
     },
     {
       "load_level": "high",
       "capacity_level": "low",
       "latency_risk": "low",
-      "advice": "redistribute",
-      "message": "With high load and low capacity, immediate redistribution of tasks is crucial to alleviate pressure and improve responsiveness. Monitor closely to ensure the redistribution effectively addresses the current bottleneck."
+      "advice": "avoid",
+      "message": "The system is currently operating under high load and low capacity, posing a significant risk of increased latency. Accepting more tasks would likely exacerbate these issues."
     },
     {
       "load_level": "high",
       "capacity_level": "low",
       "latency_risk": "medium",
-      "advice": "redistribute",
-      "message": "High load and low capacity indicate a need to distribute the workload across multiple servers to alleviate pressure. Prioritize tasks and consider dynamic routing to optimize resource utilization."
+      "advice": "avoid",
+      "message": "Current load is high and capacity is low, indicating a significant risk of increased latency. Accepting additional tasks would likely degrade performance."
     },
     {
       "load_level": "high",
       "capacity_level": "low",
       "latency_risk": "high",
-      "advice": "redistribute",
-      "message": "High load and low capacity necessitate immediate workload redistribution to improve performance and mitigate latency risk. Prioritize tasks and consider shifting some to less stressed nodes."
+      "advice": "avoid",
+      "message": "Current load and capacity are critically low, and the latency risk is extremely high. Accepting more tasks would likely lead to significant performance degradation and instability."
     },
     {
       "load_level": "high",
       "capacity_level": "medium",
       "latency_risk": "low",
-      "advice": "redistribute",
-      "message": "With high load and medium capacity, redistributing tasks to available nodes will help alleviate pressure and maintain low latency risk."
+      "advice": "accept",
+      "message": "The load is high, but my capacity is medium and latency risk is low. I can handle additional tasks within acceptable parameters."
     },
     {
       "load_level": "high",
       "capacity_level": "medium",
       "latency_risk": "medium",
-      "advice": "redistribute",
-      "message": "With a high load and medium capacity, redistributing tasks to available resources is crucial to mitigate the medium latency risk. Prioritize distributing requests to less burdened servers to improve responsiveness."
+      "advice": "avoid",
+      "message": "The system is currently experiencing high load and medium latency risk. Accepting additional tasks would likely exacerbate these issues and negatively impact performance."
     },
     {
       "load_level": "high",
       "capacity_level": "medium",
       "latency_risk": "high",
-      "advice": "redistribute",
-      "message": "High load and latency risk necessitate immediate redistribution of tasks to improve system responsiveness and prevent further degradation. Prioritize distributing requests to less burdened nodes."
+      "advice": "avoid",
+      "message": "The system is currently experiencing high load and significant latency risk. Accepting additional tasks would likely exacerbate these issues and negatively impact performance."
     },
     {
       "load_level": "high",
       "capacity_level": "high",
       "latency_risk": "low",
       "advice": "accept",
-      "message": "Current system health is optimal; continued operation at the present load level is acceptable. Monitoring remains recommended to proactively address any future changes."
+      "message": "With high load and capacity, I can comfortably handle additional tasks. Monitoring will continue to ensure optimal performance."
     },
     {
       "load_level": "high",
       "capacity_level": "high",
       "latency_risk": "medium",
-      "advice": "redistribute",
-      "message": "High load and latency indicate a need to distribute the workload across multiple nodes. Prioritize tasks and consider moving some requests to less stressed servers to alleviate the pressure."
+      "advice": "avoid",
+      "message": "The system is currently operating at high load and capacity, and latency is a concern. Taking on additional tasks could significantly worsen performance."
     },
     {
       "load_level": "high",
       "capacity_level": "high",
       "latency_risk": "high",
-      "advice": "redistribute",
-      "message": "High load, capacity, and latency indicate a need to distribute the workload across multiple servers to alleviate the pressure and improve responsiveness."
+      "advice": "avoid",
+      "message": "The system is currently experiencing high load, capacity, and latency risk. Accepting additional tasks would likely further degrade performance and is not advisable."
     }
   ]
 }

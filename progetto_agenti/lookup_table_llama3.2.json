@@ -1,0 +1,219 @@
+{
+  "metadata": {
+    "model": "llama3.2:latest",
+    "generated": "2026-07-13T20:58:24.999463",
+    "variables": {
+      "load_level": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "capacity_level": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "latency_risk": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "advice_values": [
+      "accept",
+      "avoid"
+    ],
+    "total_combinations": 27
+  },
+  "lookup_table": [
+    {
+      "load_level": "low",
+      "capacity_level": "low",
+      "latency_risk": "low",
+      "advice": "accept",
+      "message": "Current load and capacity are low, allowing for increased task takeup. However, latency risk is still within acceptable limits."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "low",
+      "latency_risk": "medium",
+      "advice": "avoid",
+      "message": "Current load level and capacity level are low, increasing risk of latency and system overload."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "low",
+      "latency_risk": "high",
+      "advice": "avoid",
+      "message": "Current load and capacity levels are low, but high latency risk may be exacerbated by increased task volume."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "medium",
+      "latency_risk": "low",
+      "advice": "accept",
+      "message": "System load is low, and current capacity level is sufficient to handle additional tasks, but high latency risk indicates potential performance issues if load is not managed."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "medium",
+      "latency_risk": "medium",
+      "advice": "accept",
+      "message": "System has low load level, indicating available capacity, and medium latency risk, indicating ability to handle increased load."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "medium",
+      "latency_risk": "high",
+      "advice": "avoid",
+      "message": "Low load and medium capacity levels indicate a potential bottleneck; high latency risk may be exacerbated by taking on more tasks."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "high",
+      "latency_risk": "low",
+      "advice": "accept",
+      "message": "Low load and high capacity suggest optimal utilization. Accepting more tasks should not pose a significant risk to performance."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "high",
+      "latency_risk": "medium",
+      "advice": "accept",
+      "message": "Current load level is low and capacity level is high, but latency risk is medium. Accepting tasks will help alleviate latency risk."
+    },
+    {
+      "load_level": "low",
+      "capacity_level": "high",
+      "latency_risk": "high",
+      "advice": "avoid",
+      "message": "Current load level is low, capacity level is high, and latency risk is high, taking more tasks may cause performance degradation."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "low",
+      "latency_risk": "low",
+      "advice": "accept",
+      "message": "Current load is medium, with available capacity level low. Accepting more tasks may strain resources, but it can also optimize usage and reduce costs."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "low",
+      "latency_risk": "medium",
+      "advice": "accept",
+      "message": "Current load level is medium, but capacity level is low. Accepting more tasks may improve overall system capacity, but may also increase latency risk."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "low",
+      "latency_risk": "high",
+      "advice": "accept",
+      "message": "Capacity level is low, but load level is manageable. Taking on more tasks may lead to increased latency risk."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "medium",
+      "latency_risk": "low",
+      "advice": "accept",
+      "message": "Current load level and capacity level are at medium, allowing for additional task acceptance. However, be cautious of potential increased latency risks if load level exceeds high in the near future."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "medium",
+      "latency_risk": "medium",
+      "advice": "accept",
+      "message": "Current load level and capacity level are within moderate thresholds, but caution is advised due to rising latency risk."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "medium",
+      "latency_risk": "high",
+      "advice": "avoid",
+      "message": "Current load level and capacity level are at medium, which may lead to performance issues. Accepting more tasks may exacerbate these issues."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "high",
+      "latency_risk": "low",
+      "advice": "accept",
+      "message": "Current load and capacity levels are within acceptable thresholds, and low latency risk makes it a suitable time to take on additional tasks."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "high",
+      "latency_risk": "medium",
+      "advice": "accept",
+      "message": "Current load level is medium, and capacity level is high, allowing for task allocation. However, latency risk is medium, suggesting caution but not a definitive rejection."
+    },
+    {
+      "load_level": "medium",
+      "capacity_level": "high",
+      "latency_risk": "high",
+      "advice": "avoid",
+      "message": "Current load level is medium, but capacity level is high, indicating system is already stretched. Accepting more tasks could compromise performance and increase latency risk."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "low",
+      "latency_risk": "low",
+      "advice": "avoid",
+      "message": "System is currently at high load and low capacity, and has low latency risk. Accepting more tasks may compromise system stability."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "low",
+      "latency_risk": "medium",
+      "advice": "avoid",
+      "message": "Current load level is high, capacity level is low, and latency risk is medium. Accepting more tasks could compromise system performance and reliability."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "low",
+      "latency_risk": "high",
+      "advice": "avoid",
+      "message": "Current load level is high, capacity level is low, and latency risk is high. Accepting more tasks may compromise system performance."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "medium",
+      "latency_risk": "low",
+      "advice": "accept",
+      "message": "Current load level is high, but capacity level is still medium. Taking on more tasks may put additional strain, but accepting tasks could potentially allow for better resource utilization."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "medium",
+      "latency_risk": "medium",
+      "advice": "avoid",
+      "message": "Current load level is high, capacity level is medium, and latency risk is medium. Taking on more tasks may compromise system stability."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "medium",
+      "latency_risk": "high",
+      "advice": "avoid",
+      "message": "Load level is high, capacity level is medium, and latency risk is high. Taking on more tasks could compromise system performance and reliability."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "high",
+      "latency_risk": "low",
+      "advice": "accept",
+      "message": "High load and capacity levels indicate a buffer against increased task volume, while low latency risk suggests the system can handle additional load."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "high",
+      "latency_risk": "medium",
+      "advice": "avoid",
+      "message": "System is already at high load and capacity levels, risking potential latency issues. Accepting more tasks may compromise overall system performance."
+    },
+    {
+      "load_level": "high",
+      "capacity_level": "high",
+      "latency_risk": "high",
+      "advice": "avoid",
+      "message": "Current load level and capacity level are at high, which may lead to increased latency risks. Accepting more tasks could exacerbate these risks."
+    }
+  ]
+}
